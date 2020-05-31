@@ -1,0 +1,9 @@
+.git
+.dist
+.app
+.venv
+.src
+.public
+Pipfile
+Pipfile.lock
+
