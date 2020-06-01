@@ -1,9 +1,12 @@
 FROM python:3.8
 
 WORKDIR /app
+
 COPY requirements.txt .
 RUN ["pip", "install", "-r", "requirements.txt"]
 
-COPY . .
+# COPY . .
+COPY run.py .
 
-RUN ["python", "run_server.py"]
+# CMD ["python", "-m", "http.server", "5000"]
+CMD ["flask", "run", "--host", "0.0.0.0"]

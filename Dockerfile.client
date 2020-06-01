@@ -4,6 +4,10 @@ WORKDIR /app
 
 COPY . .
 
+# RUN ["sudo", "apt-get", "install", "build-essential"]
+
+RUN ["yarn", "config", "set", "cache-folder", "./.yarn-cache"]
+RUN ["yarn", "upgrade"]
 RUN ["yarn", "install"]
 
-CMD ["yarn", "start"]
+CMD ["yarn", "serve"]

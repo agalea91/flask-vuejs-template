@@ -1,11 +1,10 @@
-# Flask-VueJs-Template 🌶️✌
+# Flask Vue App
 
-[![Build Status](https://travis-ci.org/gtalarico/flask-vuejs-template.svg?branch=master)](https://travis-ci.org/gtalarico/flask-vuejs-template)
-[![codecov](https://codecov.io/gh/gtalarico/flask-vuejs-template/branch/master/graph/badge.svg)](https://codecov.io/gh/gtalarico/flask-vuejs-template)
+_Flask + Vue.js Web Application
 
-_Flask + Vue.js Web Application Template_
 
-![Vue Logo](/docs/vue-logo.png "Vue Logo") ![Flask Logo](/docs/flask-logo.png "Flask Logo")
+
+## Original README
 
 ## Features
 * Minimal Flask 1.0 App
@@ -27,16 +26,6 @@ If this setup is not what you are looking for, here are some similar projects:
 
 * [oleg-agapov/flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa)
 * [testdrivenio/flask-vue-crud](https://github.com/testdrivenio/flask-vue-crud)
-
-#### Old Template
-
-This template was updated to use a flatter folder structure and use yarn instead of npm.
-You can now run `yarn serve` as well as other yarn commands from the template root directory.
-The old template will be kept in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template) but will not be maintained. 
-
-#### Django
-
-Prefer Django? Checkout the [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
 
 ## Template Structure
 
@@ -82,8 +71,7 @@ Before getting started, you should have the following installed and running:
 - [X] Yarn - [instructions](https://yarnpkg.com/en/docs/install#mac-stable)
 - [X] Vue Cli 3 - [instructions](https://cli.vuejs.org/guide/installation.html)
 - [X] Python 3
-- [X] Pipenv (optional)
-- [X] Heroku Cli (if deploying to Heroku)
+
 
 ##### Template and Dependencies
 
@@ -140,36 +128,3 @@ $ python run.py
 ```
 
 
-## Production Server
-
-This template is configured to work with Heroku + Gunicorn and it's pre-configured
-to have Heroku build the application before releasing it.
-
-#### JS Build Process
-
-Heroku's nodejs buidlpack will handle install for all the dependencies from the `packages.json` file.
-It will then trigger the `postinstall` command which calls `yarn build`.
-This will create the bundled `dist` folder which will be served by whitenoise.
-
-#### Python Build Process
-
-The python buildpack will detect the `Pipfile` and install all the python dependencies.
-
-#### Production Sever Setup
-
-Here are the commands we need to run to get things setup on the Heroku side:
-
-	```
-	$ heroku apps:create flask-vuejs-template-demo
-	$ heroku git:remote --app flask-vuejs-template-demo
-	$ heroku buildpacks:add --index 1 heroku/nodejs
-	$ heroku buildpacks:add --index 2 heroku/python
-	$ heroku config:set FLASK_ENV=production
-	$ heroku config:set FLASK_SECRET=SuperSecretKey
-
-	$ git push heroku
-	```
-
-### Heroku deployment - One Click Deploy
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gtalarico/flask-vuejs-template)

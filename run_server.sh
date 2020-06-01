@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /app
-yarn start
+python run.py

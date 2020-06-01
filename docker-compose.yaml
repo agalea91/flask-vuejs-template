@@ -7,10 +7,11 @@ services:
     ports: 
       - "8080:8080"
     volumes:
-      - .app:/app/app
-      - .public:/app/public
-      - .src:/app/src
-      - .dist:/app/dist
+      - ./app:/app/app
+      - ./public:/app/public
+      - ./src:/app/src
+      - ./dist:/app/dist
+      - ./.yarn-cache:/app/.yarn-cache
     # command: ["./app/run_client.sh"]
   server:
     build:
@@ -19,8 +20,8 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - .app:/app/app
-      - .public:/app/public
-      - .src:/app/src
-      - .dist:/app/dist
+      - ./app:/app/app
+      - ./public:/app/public
+      - ./src:/app/src
+      - ./dist:/app/dist
     # command: ["./app/run_server.py"]
