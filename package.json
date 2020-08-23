@@ -24,11 +24,6 @@
     "sass-loader": "^6.0.6",
     "vue-template-compiler": "^2.5.13"
   },
-  "proxy": {
-    "/api":  {
-        "target": "http://server:5000"
-    }
-  },
   "babel": {
     "presets": [
       "@vue/app"

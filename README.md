@@ -1,6 +1,6 @@
 # Flask Vue App
 
-_Flask + Vue.js Web Application
+_Flask + Vue.js Web Application_
 
 
 
