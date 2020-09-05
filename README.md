@@ -1,19 +1,14 @@
 # Flask Vue App
 
-## LINKS
-https://github.com/gtalarico/flask-vuejs-template
-https://www.danielefavi.com/blog/create-your-blockchain-dapp-with-ethereum-and-vuejs/
-https://medium.com/openberry/ethereum-solidity-vue-js-tutorial-simple-auction-dapp-within-10-minutes-76ba48156b2
-https://medium.com/coinmonks/ethereum-dapp-with-vuejs-app-ec56ac8c5951
-https://github.com/yarnpkg/yarn/issues/749
-https://medium.com/@brian.young.pro/how-to-deploy-vue-js-app-to-google-cloud-with-cloud-build-ad104bb1cf60
-
-
-
-
-
-
 _Flask + Vue.js Web Application_
+
+## Quickstart
+
+Build and run the server and client docker images:
+```
+make run
+```
+
 
 
 
